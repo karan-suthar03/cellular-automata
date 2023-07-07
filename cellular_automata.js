@@ -1,4 +1,4 @@
-let rows, cols, cellSize, k;
+let rows, cols, cellSize, k = 1;
 let grid, grid2;
 let flow = new Array(3);
 let width = 400,
@@ -38,7 +38,10 @@ function draw() {
       mousePressed();
     }
   }
-  updategrid();
+    if (k == 1) {
+    updategrid();
+    k = 0;
+  }
   //grid = grid2;
 }
 
@@ -157,4 +160,7 @@ function findVecotor(id, contain) {
 
     flow[row][col] = 0;
   }
+}
+function nextFrame() {
+  k = 1;
 }
