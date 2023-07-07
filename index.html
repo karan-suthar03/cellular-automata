@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="libraries/p5.min.js"
+    ></script>
+
+    <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .grid-container {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 10px;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .grid-item {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 100px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .on {
+        background-color: green;
+        color: white;
+      }
+
+      .off {
+        background-color: red;
+        color: white;
+      }
+
+      .ignore {
+        background-color: gray;
+        color: white;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="canvas-container">
+        <!-- The p5.js canvas will be inserted here -->
+      </div>
+      <div class="grid-container">
+        <div class="grid-item ignore" id="1" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="2" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="3" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="4" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="5" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="6" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="7" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="8" onclick="changeState(this)">
+          ignore
+        </div>
+        <div class="grid-item ignore" id="9" onclick="changeState(this)">
+          ignore
+        </div>
+      </div>
+    </div>
+    <div id="display"></div>
+    <button id="toggleButton" onclick="toggleProcess()">Start</button>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="cellular_automata.js"
+    ></script>
+  </body>
+</html>
